@@ -1,5 +1,5 @@
 ## Setup Kubernetes cluster using terraform 
-1. EKS module code is available over [here](https://github.com/ravdy/RTP-03/tree/main/terraform/v7-EC2_VPC_and_EKS/eks)  
+1. EKS module code 
    Through this eks module we are creating  
      - IAM Roles
      - IAM Policies

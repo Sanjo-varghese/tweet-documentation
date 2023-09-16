@@ -6,7 +6,7 @@ pipeline {
         }
     }
 environment {
-    PATH = "/opt/apache-maven-3.9.2/bin:$PATH"
+    PATH = "/opt/apache-maven-3.9.4/bin:$PATH"
 }
     stages {
         stage("build"){
@@ -46,11 +46,11 @@ environment {
 }
     }
   }
-         stage("Jar Publish") {
+         stage("pubish jar to Jfrog artifacts") {
         steps {
             script {
                     echo '<--------------- Jar Publish Started --------------->'
-                     def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"artfiact-cred"
+                     def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"jfrog_cred"
                      def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}";
                      def uploadSpec = """{
                           "files": [

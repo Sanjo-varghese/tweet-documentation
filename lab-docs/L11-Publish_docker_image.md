@@ -8,7 +8,7 @@
 	```
    `Check-point:`  version number in pom.xml and dockerfile should match   
 1. Create a docker repository in the Jfrog  
-    repository name: valaxy-docker
+    repository name: sanjo-docker
 1. Install `docker pipeline` plugin 
 
 1. Update Jenkins file with the below stages  

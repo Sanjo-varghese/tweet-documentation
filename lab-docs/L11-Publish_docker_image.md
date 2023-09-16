@@ -45,8 +45,9 @@ Check-point:
 
 Note: make sure docker service is running on the slave system, and docker should have permissions to /var/run/docker.sock
 
-Run Docker on Maven Slave
+check and Run Docker on Maven Slave
 ```sh
 docker images
 docker run -dt --name tweet-msg -p 8000:8000 sanjo1997.jfrog.io/sanjo-docker-local/tweet-msg:2.1.2
+on Browser <maven-slave-public-ip>:8080 port
 ```

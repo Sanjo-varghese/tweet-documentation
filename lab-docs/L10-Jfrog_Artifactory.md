@@ -10,7 +10,7 @@
             steps {
                 script {
                         echo '<--------------- Jar Publish Started --------------->'
-                         def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"artifactory_token"
+                         def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"jfrog_cred"
                          def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}";
                          def uploadSpec = """{
                               "files": [

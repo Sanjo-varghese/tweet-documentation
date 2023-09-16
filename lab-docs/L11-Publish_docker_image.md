@@ -13,7 +13,7 @@
 
 1. Update Jenkins file with the below stages  
     ```sh 
-	   def imageName = 'sanjo1997.jfrog.io/valaxy-docker/ttrend'
+	   def imageName = 'sanjo1997.jfrog.io/sanjo-docker/tweetapp'
 	   def version   = '2.0.2'
         stage(" Docker Build ") {
           steps {
@@ -39,7 +39,7 @@
     ```
 
 Check-point: 
-1. Provide jfrog repo URL in the place of `sanjo1997.jfrog.io/sanjo-docker` in `def imageName = 'sanjo1997.jfrog.io/sanjo-docker/ttrend'`  
+1. Provide jfrog repo URL in the place of `sanjo1997.jfrog.io/sanjo-docker` in `def imageName = 'sanjo1997.jfrog.io/sanjo-docker/tweetapp'`  
 2. Match version number in `def version   = '2.0.2'` with pom.xml version number  
 3. Ensure you have updated credentials in the field of `artifactory_token` in `docker.withRegistry(registry, 'artifactory_token'){`
 

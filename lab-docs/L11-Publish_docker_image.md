@@ -13,8 +13,8 @@
 
 1. Update Jenkins file with the below stages  
     ```sh 
-	   def imageName = 'sanjo1997.jfrog.io/sanjo-docker/tweetapp'
-	   def version   = '2.0.2'
+	   def imageName = 'sanjo1997.jfrog.io/sanjo-docker/tweet-msg'
+	   def version   = '2.1.2'
         stage(" Docker Build ") {
           steps {
             script {
@@ -29,7 +29,7 @@
             steps {
                 script {
                    echo '<--------------- Docker Publish Started --------------->'  
-                    docker.withRegistry(registry, 'artifactory_token'){
+                    docker.withRegistry(registry, 'jfrog-cred'){
                         app.push()
                     }    
                    echo '<--------------- Docker Publish Ended --------------->'  
@@ -39,8 +39,8 @@
     ```
 
 Check-point: 
-1. Provide jfrog repo URL in the place of `sanjo1997.jfrog.io/sanjo-docker` in `def imageName = 'sanjo1997.jfrog.io/sanjo-docker/tweetapp'`  
-2. Match version number in `def version   = '2.0.2'` with pom.xml version number  
+1. Provide jfrog repo URL in the place of `sanjo1997.jfrog.io/sanjo-docker` in `def imageName = 'sanjo1997.jfrog.io/sanjo-docker/tweet-msg'`  
+2. Match version number in `def version   = '2.1.2'` with pom.xml version number  
 3. Ensure you have updated credentials in the field of `artifactory_token` in `docker.withRegistry(registry, 'artifactory_token'){`
 
 Note: make sure docker service is running on the slave system, and docker should have permissions to /var/run/docker.sock

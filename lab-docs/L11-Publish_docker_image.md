@@ -47,7 +47,10 @@ Note: make sure docker service is running on the slave system, and docker should
 
 check and Run Docker on Maven Slave
 ```sh
+sudo su -
 docker images
+.To Generate token ->jfrog->set me up->Set Up A Client->select docker->Generate token
+.docker login 
 docker run -dt --name tweet-msg -p 8000:8000 sanjo1997.jfrog.io/sanjo-docker-local/tweet-msg:2.1.2
-on Browser <maven-slave-public-ip>:8080 port
+.on Browser <maven-slave-public-ip>:8080 port
 ```

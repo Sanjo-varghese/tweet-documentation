@@ -25,3 +25,24 @@
    Add sonarqube scanner 
    - Sonarqube scanner: `sonar-scanner`
 
+   7.Add webhook on sonarcloud.io
+   Administration section of project eg:sanjo1997
+   administrtion section of  Repo eg:tweetapp
+  ` http://jenkins_pub_iP:8080/sonarqube-webhook/`
+
+8.change value to quailty gates according to Bugs of code in my case"
+```sh
+Metric              Operator           Value
+
+Bugs              is greater than      10
+
+Code Smells       is greater than      30
+```
+
+
+
+
+
+
+
+

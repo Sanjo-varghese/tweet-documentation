@@ -29,3 +29,13 @@
    ```sh 
     aws eks update-kubeconfig --region us-east-2 --name SanJo-eks-cluster
    ```
+
+  1. To Display Nodes
+   ``sh
+   kubectl get nodes
+   ```
+
+1.1. To Display pods
+   ``sh
+   kubectl get pods
+   ```

@@ -3,8 +3,8 @@
 1. Create a dedicated user to use for a docker login   
      user menu --> new user  
      `user name`: jfrogcred  
-     `email address`: sanjopcdoc@gmail.com  
-     `password`: <passwrod>  
+     `email address`: sanjopcxxxc@gmail.com  
+     `password`: <password>  
 
 2. To pull an image from jfrog at the docker level, we should log into jfrog using username and password   
 ```sh 

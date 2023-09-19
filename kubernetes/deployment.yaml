@@ -1,3 +1,4 @@
+```sh
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -30,3 +31,4 @@ spec:
           value: "9703354-52rXHD6EeOQeYyhtNz1w8UVOgbcLcgOo4O7MB6WV3"
         - name: ACCESS_TOKEN_SECRET
           value: "zBThlZDEp8qnu7NwwdHNth8eg3Rf9zqbvUEFUTaZtN2SF"
+```

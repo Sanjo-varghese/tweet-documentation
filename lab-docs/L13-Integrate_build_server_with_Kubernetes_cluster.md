@@ -2,7 +2,7 @@
 
 1. Setup kubectl   
    ```sh 
-     curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.9/2023-01-11/bin/linux/amd64/kubectl
+     curl -LO https://dl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl
      chmod +x ./kubectl
      mv ./kubectl /usr/local/bin
      kubectl version
@@ -12,6 +12,7 @@
     ```sh 
      yum remove awscli 
      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    install unzip :apt install unzip
      unzip awscliv2.zip
      sudo ./aws/install --update
     ```
@@ -20,10 +21,11 @@
     ```sh 
      aws configure
      Provide access_key, secret_key
+    aws s3 ls
     ```
 
 1. Download Kubernetes credentials and cluster configuration (.kube/config file) from the cluster  
 
    ```sh 
-    aws eks update-kubeconfig --region us-east-1 --name sanjo-eks-01
+    aws eks update-kubeconfig --region us-east-2 --name SanJo-eks-cluster
    ```

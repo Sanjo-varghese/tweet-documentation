@@ -31,11 +31,12 @@
    ```
 
   1. To Display Nodes
-   ``sh
+
+   ```sh
    kubectl get nodes
    ```
 
-1.1. To Display pods
-   ``sh
+  1. To Display pods
+  ```sh
    kubectl get pods
    ```

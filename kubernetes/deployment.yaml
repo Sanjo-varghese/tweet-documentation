@@ -17,7 +17,7 @@ spec:
         - name: jfrogcred
       containers:
         - name: sanjo-rtp
-          image: 'sanjo1997.jfrog.io/artifactory/sanjo-docker-local/tweet-msg:2.1.2'
+          image: sanjo1997.jfrog.io/artifactory/sanjo-docker-local/tweet-msg:2.1.2
           imagePullPolicy: Always
           ports:
             - containerPort: 8000

@@ -24,6 +24,19 @@
     aws s3 ls
     ```
 
+1.Give privelliage to ubuntu  and access cluster from  root user
+```sh
+cd /opt
+ls
+Mv kubernetes/ /home/ubuntu
+chown -R ubuntu:ubuntu /home/ubuntu
+ls -l /home/ubuntu
+sudo su - ubuntu
+# Now configure our aws
+aws configure
+provide access key and secret key
+```
+
 1. Download Kubernetes credentials and cluster configuration (.kube/config file) from the cluster  
 
    ```sh 

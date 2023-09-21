@@ -28,8 +28,7 @@
       ls
       ```
        
-#Now unzip
-
+# Now unzip
 ```sh
 tar -xvzf kube-prometheus-stack-51.1.0.tgz
 ```
@@ -39,8 +38,8 @@ tar -xvzf kube-prometheus-stack-51.1.0.tgz
    ```sh
     helm install prometheus prometheus-grafana-community/kube-prometheus-stack --namespace monitoring
    ```
-
-#check monitoring
+   
+# check monitoring
 ```sh
 kubectl get all -n monitoring
 ```
@@ -49,7 +48,8 @@ kubectl get all -n monitoring
    ```sh 
    kubectl edit svc prometheus-kube-prometheus-prometheus -n monitoring 
    ```
-   #change CluterIP to LoadBalancer
+   
+   ## change CluterIP to LoadBalancer
 
 7. Loginto Prometheus dashboard to monitor application ec2 instance LoadBalancer
    https://ELB_dnsname:9090

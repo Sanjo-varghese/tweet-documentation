@@ -75,10 +75,12 @@ Loginto Grafana dashboard to monitor application ec2 instance LoadBalancer
 
 10.  To login to Grafana account, use the below username and password 
 
-    ```sh
+
+```sh
     username: admin
     password: prom-operator
-    ```
+```
+
 
 #Search or jump to..  kubernets/API server
 

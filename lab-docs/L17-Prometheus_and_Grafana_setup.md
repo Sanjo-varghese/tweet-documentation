@@ -23,10 +23,11 @@
 
 4. pull the helm chart
 
-       ```sh
-      helm pull prometheus-grafana-community/kube-prometheus-stack
-      ls
-      ```
+ ```sh
+  helm pull prometheus-grafana-community/kube-prometheus-stack
+ ```
+
+ls
        
 # Now unzip
 ```sh

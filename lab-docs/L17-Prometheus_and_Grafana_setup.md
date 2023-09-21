@@ -28,7 +28,7 @@
       ls
       ```
        
-### Now unzip
+#Now unzip
 
 ```sh
 tar -xvzf kube-prometheus-stack-51.1.0.tgz
@@ -40,7 +40,7 @@ tar -xvzf kube-prometheus-stack-51.1.0.tgz
     helm install prometheus prometheus-grafana-community/kube-prometheus-stack --namespace monitoring
    ```
 
-### check monitoring
+#check monitoring
 ```sh
 kubectl get all -n monitoring
 ```
@@ -49,26 +49,31 @@ kubectl get all -n monitoring
    ```sh 
    kubectl edit svc prometheus-kube-prometheus-prometheus -n monitoring 
    ```
-   ### change CluterIP to LoadBalancer
+   #change CluterIP to LoadBalancer
 
-   ### Ec2 - loadbalancer copy dnsname:9090 port to run prometheus on web
+7. Loginto Prometheus dashboard to monitor application ec2 instance LoadBalancer
+   https://ELB_dnsname:9090
 
-8. Loginto Prometheus dashboard to monitor application
-   https://ELB:9090
+8. Check for node_load15 executor to check cluster monitoring 
 
-9. Check for node_load15 executor to check cluster monitoring 
-
-10. We check similar graphs in the Grafana dashboard itself. for that, we should change the service type of Grafana to LoadBalancer
+9. We check similar graphs in the Grafana dashboard itself. for that, we should change the service type of Grafana to LoadBalancer
    ```sh 
-   kubectl edit svc prometheus-grafana
+  kubectl edit svc prometheus-grafana -n monitoring
    ```
+#change CluterIP to LoadBalancer
+#kubectl get all -n monitoring
+Loginto Grafana dashboard to monitor application ec2 instance LoadBalancer
+   https://ELB_dnsname:80
 
-11.  To login to Grafana account, use the below username and password 
+10.  To login to Grafana account, use the below username and password 
     ```sh
     username: admin
     password: prom-operator
     ```
-12. Here we should check for "Node Exporter/USE method/Node" and "Node Exporter/USE method/Cluster"
+
+#Search or jump to..  kubernets/API server
+
+11. Here we should check for "Node Exporter/USE method/Node" and "Node Exporter/USE method/Cluster"
     USE - Utilization, Saturation, Errors
    
-13. Even we can check the behavior of each pod, node, and cluster 
+12. Even we can check the behavior of each pod, node, and cluster 

@@ -61,11 +61,13 @@ kubectl get all -n monitoring
 
 9. We check similar graphs in the Grafana dashboard itself. for that, we should change the service type of Grafana to LoadBalancer
 
-   ```sh 
+```sh 
   kubectl edit svc prometheus-grafana -n monitoring
-   ```
+```
+
 #change CluterIP to LoadBalancer
 #kubectl get all -n monitoring
+
 
 Loginto Grafana dashboard to monitor application ec2 instance LoadBalancer
 
@@ -80,7 +82,9 @@ Loginto Grafana dashboard to monitor application ec2 instance LoadBalancer
 
 #Search or jump to..  kubernets/API server
 
+
 11. Here we should check for "Node Exporter/USE method/Node" and "Node Exporter/USE method/Cluster"
     USE - Utilization, Saturation, Errors
+
    
 12. Even we can check the behavior of each pod, node, and cluster 

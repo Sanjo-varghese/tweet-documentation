@@ -17,7 +17,8 @@
    ```
 3. Change the version number in the 
    ```sh 
-   helm install ttrend ttrend-0.1.0.tgz
+   helm install twet-msg tweet-msg-0.1.0.tgz
+
    ```
 
 4. Create a jenkins job for the deployment 
@@ -26,7 +27,7 @@
           steps {
             script {
                echo '<--------------- Helm Deploy Started --------------->'
-               sh 'helm install ttrend ttrend-0.1.0.tgz'
+               sh 'helm install tweet-msg tweet-msg-0.1.0.tgz'
                echo '<--------------- Helm deploy Ends --------------->'
             }
           }

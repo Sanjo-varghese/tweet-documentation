@@ -55,18 +55,24 @@ kubectl get all -n monitoring
 7. Loginto Prometheus dashboard to monitor application ec2 instance LoadBalancer
    https://ELB_dnsname:9090
 
+
 8. Check for node_load15 executor to check cluster monitoring 
 
+
 9. We check similar graphs in the Grafana dashboard itself. for that, we should change the service type of Grafana to LoadBalancer
+
    ```sh 
   kubectl edit svc prometheus-grafana -n monitoring
    ```
 #change CluterIP to LoadBalancer
 #kubectl get all -n monitoring
+
 Loginto Grafana dashboard to monitor application ec2 instance LoadBalancer
+
    https://ELB_dnsname:80
 
 10.  To login to Grafana account, use the below username and password 
+
     ```sh
     username: admin
     password: prom-operator

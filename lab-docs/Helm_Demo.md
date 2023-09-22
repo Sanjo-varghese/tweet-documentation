@@ -1,5 +1,6 @@
 helm repo list
-``sh
+
+```sh
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
 
@@ -7,10 +8,8 @@ helm repo list
 
 helm repo remove bitnami
 
-To add repo
-
 ```sh
-helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo remove bitnami https://charts.bitnami.com/bitnami
 ```
 
 Search the repository:

@@ -1,5 +1,8 @@
-ADD: Copy files from a source on the host to the container’s own filesystem at the set destination.
+ADD: Copy files from a source on the host to the
+container’s own filesystem at the set destination.
+
 CMD: Execute a specific command within the container.
+
 ENTRYPOINT: Set a default application to be used every time a container is created with the image.
 ENV: Set environment variables.
 EXPOSE: Expose a specific port to enable networking between the container and the outside world.
